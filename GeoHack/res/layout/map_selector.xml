@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"    
+	android:id="@+id/mymap" 	            
+    android:layout_width="match_parent"     
+    android:layout_height="match_parent">
+             
+    <com.google.android.maps.MapView
+        android:id="@+id/mapview" 	          
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:clickable="true"
+        android:apiKey="07sz0h-T4pth2p005eNJU5nGA8moaTCeWj8e6eg" />  
+ 
+    <TextView
+	    android:id="@+id/lblMapInstruction"
+		android:textSize="20sp"
+    	android:layout_width="wrap_content" 
+    	android:layout_height="wrap_content" 
+   		android:layout_marginLeft="10pt"	
+   		android:layout_marginTop="10pt"	
+   		android:text="" />
+
+    <TextView
+	    android:id="@+id/lblMapPointInfo"
+   		android:layout_above="@+id/layoutMapButton"
+		android:textSize="20sp"
+    	android:layout_width="wrap_content" 
+    	android:layout_height="wrap_content" 
+   		android:layout_marginLeft="10pt"	
+   		android:layout_marginBottom="10pt"	
+   		android:text="" />
+    
+	<LinearLayout 
+    	android:id="@+id/layoutMapButton"    
+   		android:layout_alignParentBottom="true"
+       	android:layout_width="fill_parent"
+       	android:layout_height="wrap_content"         
+    	android:orientation="horizontal" >
+
+	   	<Button
+	   	    android:id="@+id/btnCancel"
+	   	    android:layout_width="wrap_content"
+	   	    android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:layout_marginLeft="10dip"
+	   	    android:layout_marginRight="10dip"
+	   	    android:layout_marginBottom="10dip"
+	   	    android:onClick="onClickCancel"
+	   	    android:background="@drawable/button_shape"
+	   	    android:textSize="22sp"
+	   	    android:text="Annuler" />
+	    	    
+	   	<Button
+	   	    android:id="@+id/btnConfirm"
+	   	    android:layout_width="wrap_content"
+	   	    android:layout_height="wrap_content"
+	   	    android:layout_weight="1"
+	   	    android:layout_marginLeft="10dip"
+	   	    android:layout_marginRight="10dip"
+	   	    android:layout_marginBottom="10dip"
+	   	    android:onClick="onClickConfirm"
+	   	    android:background="@drawable/button_shape"
+	   	    android:textSize="22sp"
+	   	    android:text="Accepter" />
+
+    </LinearLayout>    
+</RelativeLayout> 

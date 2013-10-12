@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+   	<WebView
+	    android:id="@+id/webView1"
+	    android:layout_width="fill_parent"
+   	    android:layout_height="fill_parent"
+       	android:orientation="vertical" >
+	</WebView>
+    
+    
+	<LinearLayout 
+    	android:id="@+id/layout_button"    
+   		android:layout_alignParentBottom="true"
+       	android:layout_width="fill_parent"
+       	android:layout_height="wrap_content"         
+    	android:orientation="horizontal" >
+    
+	   	<Button
+	   	    android:id="@+id/btnLocalize"
+	   	    android:layout_width="wrap_content"
+	   	    android:layout_height="wrap_content"
+	   	    android:layout_weight="1"
+	   	    android:layout_marginLeft="10dip"
+	   	    android:layout_marginRight="10dip"
+	   	    android:layout_marginBottom="10dip"
+	   	    android:onClick="onClickLocalize"
+	   	    android:background="@drawable/button_shape"
+	   	    android:textSize="22sp"	   	    
+	   	    android:text="Localiser" />
+
+	   	<Button
+	   	    android:id="@+id/btnDescribe"
+	   	    android:layout_width="wrap_content"
+	   	    android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:layout_marginLeft="10dip"
+	   	    android:layout_marginRight="10dip"
+	   	    android:layout_marginBottom="10dip"
+	   	    android:onClick="onClickDescribe"
+	   	    android:background="@drawable/button_shape"
+	   	    android:textSize="22sp"	   	    
+	   	    android:text="Décrire" />
+
+	   	<Button
+	   	    android:id="@+id/btnBroadcast"
+	   	    android:layout_width="wrap_content"
+	   	    android:layout_height="wrap_content"
+			android:layout_weight="1"
+	   	    android:layout_marginLeft="10dip"
+			android:layout_marginRight="10dip"
+	   	    android:layout_marginBottom="10dip"
+	   	    android:onClick="onClickBroadcast"
+	   	    android:background="@drawable/button_shape"
+	   	    android:textSize="22sp"	   	    
+	   	    android:text="Diffuser" />
+	   		   		   		   	
+    </LinearLayout>
+    
+</RelativeLayout>

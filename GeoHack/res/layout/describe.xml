@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+	<LinearLayout 
+    	android:id="@+id/layout_button"    
+   		android:layout_alignParentBottom="true"
+       	android:layout_width="fill_parent"
+       	android:layout_height="wrap_content"         
+    	android:orientation="horizontal" >
+    
+	   	<Button
+	   	    android:id="@+id/btnCancel"
+	   	    android:layout_width="wrap_content"
+	   	    android:layout_height="wrap_content"
+	   	    android:layout_weight="1"
+	   	    android:layout_marginLeft="10dip"
+	   	    android:layout_marginRight="10dip"
+	   	    android:layout_marginBottom="10dip"
+	   	    android:onClick="onClickCancel"
+	   	    android:background="@drawable/button_shape"
+	   	    android:textSize="22sp"	   	    
+	   	    android:text="Annuler" />
+
+	   	<Button
+	   	    android:id="@+id/btnOK"
+	   	    android:layout_width="wrap_content"
+	   	    android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:layout_marginLeft="10dip"
+	   	    android:layout_marginRight="10dip"
+	   	    android:layout_marginBottom="10dip"
+	   	    android:onClick="onClickOK"
+	   	    android:background="@drawable/button_shape"
+	   	    android:textSize="22sp"	   	    
+	   	    android:text="Accepter" />	   		   		   		   	
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lblUserID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+		android:textSize="20sp"
+        android:text="Usager:" />
+    
+    <EditText
+        android:id="@+id/txtUserID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+   	    android:layout_marginBottom="10dip"
+        android:layout_below="@id/lblUserID"
+        android:text="LukeTheDuke" >
+        <requestFocus />
+    </EditText>
+        		
+    <TextView
+        android:id="@+id/lblSelectType"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+		android:layout_below="@id/txtUserID"
+		android:textSize="20sp"
+        android:text="Type d'élément:" />
+
+    <Spinner
+        android:id="@+id/cboSelectType"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+   	    android:layout_marginBottom="10dip"
+        android:layout_below="@id/lblSelectType"  />
+
+    <TextView
+        android:id="@+id/lblTronconID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cboSelectType"
+		android:textSize="20sp"
+        android:text="Tronçon:" />
+    
+    <Spinner
+        android:id="@+id/cboTronconID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+   	    android:layout_marginBottom="10dip"
+        android:layout_below="@id/lblTronconID" />
+    		
+</RelativeLayout>

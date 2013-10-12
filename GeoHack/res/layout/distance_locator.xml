@@ -1,0 +1,117 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical">
+	
+	<LinearLayout 
+    	android:id="@+id/layout_button"    
+   		android:layout_alignParentBottom="true"
+       	android:layout_width="fill_parent"
+       	android:layout_height="wrap_content"         
+    	android:orientation="horizontal" 
+    	android:background="#000000" >
+    
+	   	<Button
+	   	    android:id="@+id/btnCapture"
+	   	    android:layout_width="wrap_content"
+	   	    android:layout_height="wrap_content"
+	   	    android:layout_weight="1"
+	   	    android:layout_marginLeft="10dip"
+	   	    android:layout_marginRight="10dip"
+	   	    android:layout_marginBottom="10dip"
+	   	    android:layout_marginTop="10dip"
+	   	    android:onClick="onClickCapture"
+	   	    android:background="@drawable/button_shape"
+	   	    android:text="Saisir" />
+	   	
+	   	<Button
+	   	    android:id="@+id/btnReset"
+	   	    android:layout_width="wrap_content"
+	   	    android:layout_height="wrap_content"
+	   	    android:layout_weight="1"
+	   	    android:layout_marginLeft="10dip"
+	   	    android:layout_marginRight="10dip"
+	   	    android:layout_marginBottom="10dip"
+	   	    android:layout_marginTop="10dip"
+	   	    android:onClick="onClickReset"
+	   	    android:background="@drawable/button_shape"
+	   	    android:text="Réinitialiser" />
+	   		   	
+	   	<Button
+	   	    android:id="@+id/btnCompute"
+	   	    android:layout_width="wrap_content"
+	   	    android:layout_height="wrap_content"
+	   	    android:layout_weight="1"
+	   	    android:layout_marginLeft="10dip"
+	   	    android:layout_marginRight="10dip"
+	   	    android:layout_marginBottom="10dip"
+	   	    android:layout_marginTop="10dip"
+	   	    android:onClick="onClickCompute"
+	   	    android:background="@drawable/button_shape"
+	   	    android:text="Estimer" />
+	   	</LinearLayout>
+    
+	<SurfaceView 
+	    android:id="@+id/surface_camera"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:layout_above="@id/layout_button">
+	</SurfaceView>
+	
+    <TextView
+	    android:id="@+id/lblCapture"
+		android:textSize="20sp"
+    	android:layout_width="wrap_content" 
+    	android:layout_height="wrap_content" 
+   		android:layout_marginLeft="10pt"	
+   		android:layout_marginTop="10pt"	
+   		android:text="" />
+
+	<LinearLayout 
+    	android:id="@+id/layout_zoom"    
+       	android:layout_width="wrap_content"
+       	android:layout_height="wrap_content"         
+    	android:orientation="vertical" 
+    	android:layout_alignParentRight="true" >
+    
+	    <ImageButton
+	        android:id="@+id/btnZoomPlus"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	   	    android:onClick="onClickZoomIn"	        
+     		android:layout_marginTop="5pt"	
+     		android:layout_marginRight="5pt"	
+	        android:src="@drawable/plus_grey32"
+	        android:background="@null" />
+	
+	    <ImageButton
+	        android:id="@+id/btnZoomMinus"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	   	    android:onClick="onClickZoomOut"	        
+     		android:layout_marginTop="5pt"	
+     		android:layout_marginRight="5pt"	
+	        android:src="@drawable/minus_grey32"
+	        android:background="@null" />
+	</LinearLayout>  
+	
+    <TextView
+	    android:id="@+id/lblGPSStatus"
+		android:textSize="20sp"
+   		android:layout_above="@+id/layout_button"		
+    	android:layout_width="wrap_content" 
+    	android:layout_height="wrap_content" 
+   		android:layout_marginLeft="10pt"	
+   		android:text="" />
+    
+    <TextView
+	    android:id="@+id/lblVAngle"
+		android:textSize="20sp"
+   		android:layout_above="@+id/lblGPSStatus"		
+    	android:layout_width="wrap_content" 
+    	android:layout_height="wrap_content" 
+   		android:layout_marginLeft="10pt"	
+   		android:text="" />
+    
+    				    
+</RelativeLayout>
+ 
